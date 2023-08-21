@@ -44,7 +44,8 @@ function displayGameImage() {
   } else {
     bottomText.innerHTML = `<a id="link" href="https://github.com/Edmund-Frio" target="_blank"
     >Click here to see more of my projects on GitHub!</a
-  >`;
+  >
+  <div>Keep clicking if you haven't seen all of my favorites games yet! There are about 6 in total :)</div>`;
     bgColor.style.backgroundColor = "#777777"
   }
 }
