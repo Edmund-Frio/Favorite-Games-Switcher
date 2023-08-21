@@ -52,8 +52,14 @@ body {
 }
 
 #bottom-text {
+  text-align: center;
   color: var(--secondary-color);
   padding: 5px;
   border-radius: 5px;
+  background-color: var(--primary-color);
+}
+
+#link {
+  color: var(--secondary-color);
   background-color: var(--primary-color);
 }

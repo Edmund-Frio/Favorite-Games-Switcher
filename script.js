@@ -1,49 +1,21 @@
 let gameBtn = document.getElementById("game-btn");
 let gameImage = document.getElementById("game-image");
 let bottomText = document.getElementById("bottom-text");
+let bgColor = document.body;
 
 let games = [
-  {
-    image: "/images/GOT.jpg",
-    bodyColor: "#141414",
-    caption: "1",
-  },
-  {
-    image: "/images/GOWR.jpg",
-    bodyColor: "#5B83A4",
-    caption: "2",
-  },
-  {
-    image: "/images/IF2.jpg",
-    bodyColor: "#CC9952",
-    caption: "3",
-  },
-  {
-    image: "/images/PTR.jpg",
-    bodyColor: "#4F4639",
-    caption: "4",
-  },
-  {
-    image: "/images/RDR2.jpg",
-    bodyColor: "#AD6500",
-    caption: "5",
-  },
-  {
-    image: "/images/Y0.jpg",
-    bodyColor: "#3C0000",
-    caption: "6"
-  },
+  "/images/GOT.jpg",
+  "/images/GOWR.jpg",
+  "/images/IF2.jpg",
+  "/images/PTR.jpg",
+  "/images/RDR2.jpg",
+  "/images/Y0.jpg",
+  "/images/GitHub.png",
 ];
-
-gameBtn.addEventListener("click", () => {
-  displayGameImage();
-  gameText();
-});
 
 function displayGameImage() {
   let randomIndex = Math.floor(Math.random() * games.length);
   let currentImage = games[randomIndex];
-  let bgColor = document.body;
 
   bgColor.style.transition = "1s";
   gameBtn.style.background = "none";
@@ -51,25 +23,28 @@ function displayGameImage() {
 
   gameImage.src = currentImage;
 
-  for (let i = 0; i < games.length; i++) {
-    if (games[i] === 0) {
-      
-    } 
-  } 
-
-  // if (currentImage === games[0]) {
-  //   bgColor.style.backgroundColor = "#141414"
-  // } else if (currentImage === games[1]) {
-  //   bgColor.style.backgroundColor = "#5B83A4"
-  // } else if (currentImage === games[2]) {
-  //   bgColor.style.backgroundColor = "#CC9952"
-  // } else if (currentImage === games[3]) {
-  //   bgColor.style.backgroundColor = "#4F4639"
-  // } else if (currentImage === games[4]) {
-  //   bgColor.style.backgroundColor = "#AD6500"
-  // } else if (currentImage === games[5]) {
-  //   bgColor.style.backgroundColor = "#3C0000"
-  // }
+  if (currentImage === games[0]) {
+    bottomText.innerHTML = `<div>One of the few games that made me emotional because of the way the finished the story. To add to that, its beautiful world is truly something to behold.</div>`;
+    bgColor.style.backgroundColor = "#141414";
+  } else if (currentImage === games[1]) {
+    bottomText.innerHTML = `<div>Such an unforgettable gaming experience that I will forever love due to its amazing conclusion to one of my favorite characters in gaming.</div>`;
+    bgColor.style.backgroundColor = "#5B83A4";
+  } else if (currentImage === games[2]) {
+    bottomText.innerHTML = `<div>My very first PlayStation game, which basically got me into gaming and still one of my favorite games to this day.</div>`;
+    bgColor.style.backgroundColor = "#CC9952";
+  } else if (currentImage === games[3]) {
+    bottomText.innerHTML = `<div>One of the more beautiful games I've played in recent memory that gives you a story that finishes in a way that's so unfair, yet so beautiful.</div>`;
+    bgColor.style.backgroundColor = "#4F4639";
+  } else if (currentImage === games[4]) {
+    bottomText.innerHTML = `<div>A game that has never left my mind and appreciate it so much since it made me fall back in love with games again.</div>`;
+    bgColor.style.backgroundColor = "#AD6500";
+  } else if (currentImage === games[5]) {
+    bottomText.innerHTML = `<div>The perfect introduction to one of my favorite game series that is still going strong.</div>`;
+    bgColor.style.backgroundColor = "#3C0000";
+  } else {
+    bottomText.innerHTML = `<a id="link" href="https://github.com/Edmund-Frio" target="_blank"
+    >Click here to see more of my projects on GitHub!</a
+  >`;
+    bgColor.style.backgroundColor = "#777777"
+  }
 }
-
-function gameCaption() {}
