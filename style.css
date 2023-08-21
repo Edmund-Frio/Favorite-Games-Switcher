@@ -4,7 +4,7 @@
 
 :root {
   --background-color: #282b30;
-  --primary-color: #919191;
+  --primary-color: #3a3a3a;
   --secondary-color: #d8d8d8;
   --tertiary-color: #696969;
 }
@@ -51,6 +51,9 @@ body {
   border-radius: 10px;
 }
 
-.bottom-text {
+#bottom-text {
   color: var(--secondary-color);
+  padding: 5px;
+  border-radius: 5px;
+  background-color: var(--primary-color);
 }
